@@ -19,6 +19,28 @@ public class InterpretDrawingFile {
 		chooser.showOpenDialog(null);
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
+	
 		
+String shapeName = in.next();
+int red = in.nextInt();
+int green = in.nextInt();
+int blue = in.nextInt();
+
+boolean fill = in.nextBoolean();
+
+double x = in.nextDouble();
+double y = in.nextDouble();
+
+double semiMajorAxis = in.nextDouble();
+double semiMinorAxis = in.nextDouble();
+
+ StdDraw.setPenColor(red, green, blue);
+if (fill = false){
+	StdDraw.filledEllipse (x,y,semiMajorAxis, semiMinorAxis);
+}
+else{
+	StdDraw.ellipse (x,y,semiMajorAxis, semiMinorAxis);
+}
+
 	}
 }
